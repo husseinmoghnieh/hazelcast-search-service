@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+  <configuration>
+    <custom-converters>
+      <converter type="com.hazelcast.jam.search.util.DateTimeCustomConverter">
+        <class-a>org.joda.time.DateTime</class-a>
+        <class-b>org.joda.time.DateTime</class-b>
+      </converter>
+    </custom-converters>
+    <copy-by-references>
+      <copy-by-reference>
+        org.joda.time.DateTime
+      </copy-by-reference>
+      <copy-by-reference>
+        org.joda.time.LocalDate
+      </copy-by-reference>
+    </copy-by-references>
+  </configuration>
+</mappings>
